@@ -20,22 +20,34 @@ function getplayerSelection() {
 let playerSelection = getplayerSelection();
 
 
-function playGame(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     
 
     if (playerSelection === computerSelection) {
-        return 'You tied ' + computerSelection + ' is the same as ' + playerSelection; 
+        console.log('You tied ' + computerSelection + ' is the same as ' + playerSelection);
+        return 0;
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return 'You win! ' + computerSelection + ' is cut up by your ' + playerSelection;;
+        console.log('You win! ' + computerSelection + ' is cut up by your ' + playerSelection);
+        return 1;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return 'You win! ' + computerSelection + ' is covered by your ' + playerSelection;;
+        console.log('You win! ' + computerSelection + ' is covered by your ' + playerSelection);
+        return 1;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        return 'You win! ' + computerSelection + ' is crushed by your ' + playerSelection;
+        console.log('You win! ' + computerSelection + ' is crushed by your ' + playerSelection);
+        return 1;
     } else {
-        return 'You lose ' + computerSelection + ' beats ' + playerSelection;;
+        console.log('You lose ' + computerSelection + ' beats ' + playerSelection);
+        return 2;
     }
 }
-        
+         
+console.log(playRound(playerSelection, computerSelection));  
 
-        
-console.log(playGame(playerSelection, computerSelection));  
+// function game(playRound) {
+//     for (let i = 0; 1 < 5; i++) {
+//         let playerScore = 0;
+//         let computerScore = 0;
+//         if 
+//     }
+// }
+

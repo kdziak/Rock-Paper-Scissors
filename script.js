@@ -11,8 +11,6 @@ function getComputerChoice() {
 
 let computerSelection = getComputerChoice();
 
-
-
 function getplayerSelection() {
     let input = prompt('What is your choice?');
     let lowerInput = input.toLowerCase();
@@ -23,18 +21,18 @@ let playerSelection = getplayerSelection();
 
 
 function playGame(playerSelection, computerSelection) {
-    console.log(computerSelection);
+    
 
     if (playerSelection === computerSelection) {
-        return 'you tied ' + computerSelection + ' ' + playerSelection; 
+        return 'You tied ' + computerSelection + ' is the same as ' + playerSelection; 
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return 'you win! ' + computerSelection + ' ' + playerSelection;;
+        return 'You win! ' + computerSelection + ' is cut up by your ' + playerSelection;;
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return 'you win! ' + computerSelection + ' ' + playerSelection;;
+        return 'You win! ' + computerSelection + ' is covered by your ' + playerSelection;;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        return 'you win! ' + computerSelection + ' ' + playerSelection;
+        return 'You win! ' + computerSelection + ' is crushed by your ' + playerSelection;
     } else {
-        return 'you lose ' + computerSelection + ' ' + playerSelection;;
+        return 'You lose ' + computerSelection + ' beats ' + playerSelection;;
     }
 }
         

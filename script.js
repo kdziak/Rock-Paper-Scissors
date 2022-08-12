@@ -9,7 +9,7 @@ function getComputerChoice() {
     }
 }
 
-let computerSelection = getComputerChoice();
+// let computerSelection = getComputerChoice();
 
 function getplayerSelection() {
     let input = prompt('What is your choice?');
@@ -17,7 +17,7 @@ function getplayerSelection() {
     return lowerInput;
 }
 
-let playerSelection = getplayerSelection();
+// let playerSelection = getplayerSelection();
 
 
 function playRound(playerSelection, computerSelection) {
@@ -40,14 +40,32 @@ function playRound(playerSelection, computerSelection) {
         return 2;
     }
 }
-         
-console.log(playRound(playerSelection, computerSelection));  
 
-// function game(playRound) {
-//     for (let i = 0; 1 < 5; i++) {
-//         let playerScore = 0;
-//         let computerScore = 0;
-//         if 
-//     }
-// }
+function gameScore(result) {
+    
 
+    if (result == 1) {
+        return playerScore++;
+    } else if (result == 2) {
+        return computerScore++;
+    }
+}
+
+// console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = getplayerSelection();
+        let computerSelection = getComputerChoice();
+        let result = playRound(playerSelection, computerSelection);
+        gameScore(result);
+    } 
+}
+
+let playerScore = 0;
+let computerScore = 0;
+
+game();
+
+console.log(playerScore);
+console.log(computerScore);

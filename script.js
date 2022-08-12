@@ -59,7 +59,13 @@ function game() {
         let computerSelection = getComputerChoice();
         let result = playRound(playerSelection, computerSelection);
         gameScore(result);
-    } 
+    } if (playerScore > computerScore) {
+        console.log('Winner Winner, chicken dinner');
+    } else if (playerScore < computerScore) {
+        console.log('The machines have won this time.');
+    } else if (playerScore == computerScore) {
+        console.log('You have tied.')
+    }
 }
 
 let playerScore = 0;
@@ -67,5 +73,3 @@ let computerScore = 0;
 
 game();
 
-console.log(playerScore);
-console.log(computerScore);
